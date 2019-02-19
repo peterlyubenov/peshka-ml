@@ -119,8 +119,6 @@ let darkThemePeriod = {
 //Determine which theme to use based on the time of day
 function determineTheme() {
     let hours = new Date().getHours();
-
-    return "light";
     return (hours < darkThemePeriod.min && hours > darkThemePeriod.max) ? "light" : "dark";
 }
 
