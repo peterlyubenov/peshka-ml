@@ -1,9 +1,9 @@
-let rows = [];
-let filtersVisible = false;
-let searchTerm = "";
+var rows = [];
+var filtersVisible = false;
+var searchTerm = "";
 
 //Toggle filters visibility
-$('.filter-btn').click(() => {
+$('.filter-btn').click(function {
     filtersVisible = !filtersVisible; //Toggle value
     if(filtersVisible) {
         $('.filters').slideDown();
@@ -13,11 +13,11 @@ $('.filter-btn').click(() => {
 });
 
 //On input change, refilter groups
-$('#group').change(() => {
+$('#group').change(function{
     filterRows();
 });
 
-$('#search').keyup(() => {
+$('#search').keyup(function{
     searchTerm = $('#search')[0].value;
     filterRows();
 });
@@ -26,7 +26,7 @@ $('#search').keyup(() => {
 function loadSchedule() {
     $.ajax({
         url: '/programa.html'
-    }).done(data => {
+    }).done(function(data){
         $('tbody').html(data);
         filterRows();
     })
@@ -47,8 +47,8 @@ function filterRows() {
 
     showAll();
 
-    for(let i = 0; i < rows.length; i++) {
-        let html = rows[i].innerHTML;
+    for(var i = 0; i < rows.length; i++) {
+        var html = rows[i].innerHTML;
         
         if(group != 0){
             if(
@@ -76,17 +76,17 @@ function filterRows() {
 
 //Show all rows
 function showAll() {
-    for(let i = 0; i < rows.length; i++) {
+    for(var i = 0; i < rows.length; i++) {
         rows[i].className=""; //Remove 'hidden' class from all rows
     }
 }
 
 //Highlight today's classes
 function highlightToday() {
-    for(let i = 0; i < rows.length; i++) {
-        let html = rows[i].innerHTML;
+    for(var i = 0; i < rows.length; i++) {
+        var html = rows[i].innerHTML;
         if(html.includes(`<td>${getDay()}</td>`)) {
-            let className = rows[i].className;
+            var className = rows[i].className;
             rows[i].className = "highlighted" + (className.length == 0? "" : ` ${className}`); //Add class 'highlighted'
         }
     }
@@ -94,7 +94,7 @@ function highlightToday() {
 
 //Get the name of the day of the week
 function getDay() {
-    let day = new Date().getDay(); 
+    var day = new Date().getDay(); 
 
     switch(day) {
         case 0: return "Неделя";
@@ -109,26 +109,26 @@ function getDay() {
 
 
 
-let theme = "";
+var theme = "";
 
-let darkThemePeriod = {
+var darkThemePeriod = {
     max: 6,  //6:00
     min: 18, //18:00
 }
 
 //Determine which theme to use based on the time of day
 function determineTheme() {
-    let hours = new Date().getHours();
+    var hours = new Date().getHours();
     return (hours < darkThemePeriod.min && hours > darkThemePeriod.max) ? "light" : "dark";
 }
 
 function updateTheme() {
-    let newTheme = determineTheme();
+    var newTheme = determineTheme();
 
     if(newTheme == theme) return;
     theme = newTheme;
 
-    let light = theme == "light" ? '-day' : ''; //background-day if theme == light
+    var light = theme == "light" ? '-day' : ''; //background-day if theme == light
 
     $('body').css('background-image', `url("/img/background${light}.jpg")`);
 
