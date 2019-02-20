@@ -1,120 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <head>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&subset=cyrillic" rel="stylesheet">  -->
-    <link href="https://fonts.googleapis.com/css?family=Cuprum|Roboto&amp;subset=cyrillic" rel="stylesheet"> 
-    <link rel="stylesheet" href="/css/materialize.min.css">
-    <link rel="stylesheet" href="/css/dark.css" id="siteTheme">
-    <script>
-        
-    </script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Cuprum|Roboto&amp;subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/materialize.min.css" />
+    <link rel="stylesheet" href="/css/dark.css" id="siteTheme" />
+    <script></script>
     <title>Програма 4 семестър</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <div id="particles"></div>
     <nav>
-        <div class="nav-wrapper">
-            <a href="/" class="brand-logo"><img src="/img/logo.png" alt="Peshka.ml" class="logo"></a>
-            
-            <a href="javascript:void(0)" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="/">Начало</a></li>
-                <li><a href="https://github.com/neostarbg">GitHub</a></li>
-                <!-- <li><a href="/notes">Записки</a></li> -->
-            </ul>
-        </div>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo"
+          ><img src="/img/logo.png" alt="Peshka.ml" class="logo"
+        /></a>
+
+        <a
+          href="javascript:void(0)"
+          data-target="mobile-nav"
+          class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/">Начало</a></li>
+          <li><a href="https://github.com/neostarbg">GitHub</a></li>
+          <!-- <li><a href="/notes">Записки</a></li> -->
+        </ul>
+      </div>
     </nav>
-    
+
     <ul class="sidenav" id="mobile-nav">
-        <li><a href="/">Начало</a></li>
-        <li><a href="https://github.com/neostarbg">GitHub</a></li>
-        <!-- <li><a href="/notes">Записки</a></li> -->
+      <li><a href="/">Начало</a></li>
+      <li><a href="https://github.com/neostarbg">GitHub</a></li>
+      <!-- <li><a href="/notes">Записки</a></li> -->
     </ul>
     <div id="wrapper-outer">
-        <div id="wrapper-inner">
-            <h3>График на занятията</h3>
-            <h5>Софтуерно инженерство 4 семестър</h5>
-            
-            <button class="btn grey darken-4 filter-btn">Филтри <i class="material-icons right">arrow_drop_down</i></button>
-            
-            <div class="filters">
-                <form action="#">
-                    <div class="row">
+      <div id="wrapper-inner">
+        <h3>График на занятията</h3>
+        <h5>Софтуерно инженерство 4 семестър</h5>
 
-                        <!-- Group dropdown-->
-                        <div class="col s12 m3">
-                            <select name="group" id="group" class="browser-default">
-                                <option value="0">Всички групи</option>
-                                <option value="1">1 Група</option>
-                                <option value="2">2 Група</option>
-                                <option value="3">3 Група</option>
-                                <option value="4" selected>4 Група</option>
-                            </select>
-                        </div>
+        <button class="btn grey darken-4 filter-btn">
+          Филтри <i class="material-icons right">arrow_drop_down</i>
+        </button>
 
-                        <!-- Search bar -->
-                        <div class="col s12 m3 input-field">
-                            <input type="text" name="search" id="search">
-                            <label for="search">Търсене</label>
-                        </div>
-                    </div>
-                </form>
+        <div class="filters">
+          <form action="#">
+            <div class="row">
+              <!-- Group dropdown-->
+              <div class="col s12 m3">
+                <select name="group" id="group" class="browser-default">
+                  <option value="0">Всички групи</option>
+                  <option value="1">1 Група</option>
+                  <option value="2">2 Група</option>
+                  <option value="3">3 Група</option>
+                  <option value="4" selected>4 Група</option>
+                </select>
+              </div>
+
+              <!-- Search bar -->
+              <div class="col s12 m3 input-field">
+                <input type="text" name="search" id="search" />
+                <label for="search">Търсене</label>
+              </div>
             </div>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Ден</th>
-                        <th>Час</th>
-                        <th>Седмица</th>
-                        <th>Група</th>
-                        <th>Зала</th>
-                        <th>Л/У</th>
-                        <th>Дисциплина</th>
-                        <th>Преподавател</th>
-                    </tr>
-                </thead>
-                
-                <tbody>
-                    
-                </tbody>
-            </table>
-            
-            <div class="table-wrapper">
-            </div>
+          </form>
         </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Ден</th>
+              <th>Час</th>
+              <th>Седмица</th>
+              <th>Група</th>
+              <th>Зала</th>
+              <th>Л/У</th>
+              <th>Дисциплина</th>
+              <th>Преподавател</th>
+            </tr>
+          </thead>
+
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
+    <footer>
+      peshka.ml v2.0.6
+    </footer>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/app.js"></script>
-    
+
     <script>
-        $(document).ready(function(){
-            $('.sidenav').sidenav(); //Initialize the sidenav on mobile
-            $('select').formSelect();//Initialize the select input
+      $(document).ready(function() {
+        $(".sidenav").sidenav(); //Initialize the sidenav on mobile
+        $("select").formSelect(); //Initialize the select input
 
-            particlesJS.load('particles', '/js/particlesjs-config.json', () => {}); //Initialize particles.js
-            
-            if(!filtersVisible) {
-                $('.filters').css('display', 'none'); //Hide the .filters div if filtersVisible is set to false
-            }
-            
-            loadSchedule(); //Load the schedule from a separate file
-        });
+        particlesJS.load("particles", "/js/particlesjs-config.json", () => {}); //Initialize particles.js
 
-        $('.dropdown-el').click(function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            $(this).toggleClass('expanded');
-            $('#'+$(e.target).attr('for')).prop('checked',true);
-        });
+        if (!filtersVisible) {
+          $(".filters").css("display", "none"); //Hide the .filters div if filtersVisible is set to false
+        }
+
+        loadSchedule(); //Load the schedule from a separate file
+      });
+
+      $(".dropdown-el").click(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).toggleClass("expanded");
+        $("#" + $(e.target).attr("for")).prop("checked", true);
+      });
     </script>
-</body>
+  </body>
 </html>
