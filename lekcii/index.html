@@ -65,6 +65,12 @@
     <link rel="stylesheet" href="/css/dark.css" id="siteTheme" />
     <script></script>
     <title>Програма 4 семестър</title>
+    <style>
+      ul a {
+        color: #ccf; 
+        font-size: 1.4em;
+      }
+      </style>
   </head>
   <body>
     <div id="particles"></div>
@@ -91,6 +97,7 @@
 
     <ul class="sidenav" id="mobile-nav">
       <li><a href="/">Начало</a></li>
+      <li><a href="/lekcii/">Лекции</a></li>
       <li><a href="https://github.com/neostarbg">GitHub</a></li>
       <!-- <li><a href="/notes">Записки</a></li> -->
     </ul>
@@ -104,7 +111,7 @@
 
             <h3>4 семестър</h3>
             <ul>
-              <li><a href="/lekcii/algo/">Алгоритми и структури от данни</a></li>
+              <li><a href="/lekcii/algo/">🖥 Алгоритми и структури от данни</a></li>
             </ul>
           </div>
         </div>
@@ -119,6 +126,7 @@
     <script src="js/app.js"></script>
 
     <script>
+      $(".sidenav").sidenav();
       $(".dropdown-el").click(function(e) {
         e.preventDefault();
         e.stopPropagation();
