@@ -1,0 +1,68 @@
+﻿Àëãîðèòúì çà òúðñåíå â äúëáî÷èíà
+ 
+void dfs(int u)                  
+{ int v;                       
+  visited[u]=1;
+  Previsit(u); // äåéñòâèÿ ñ âúçåëà u ïðåäè îáõîæäàíå íà ñâúðçàíèòå ñ íåãî
+  for(v in Adj(u)))          
+    if (visited[v]==0)
+      dfs(v);
+  Postvisit(u); // äåéñòâèÿ ñ âúçåëà u ñëåä îáõîæäàíå íà ñâúðçàíèòå ñ íåãî
+}
+ 
+for(u=1; u<=n; u++) 
+  visited[u]=0;
+for(u=1; u<=n; u++)
+  if (visited[u]==0)
+    dfs(u);
+
+1. Ïîñòàâè ñòàðòîâèÿ âúçåë s íà âúðõà íà ñòåêà.
+2. Àêî ñòåêúò å ïðàçåí, òúðñåíåòî å íåóñïåøíî, êðàé.
+3. Àêî åëåìåíòúò íà âúðõà íà ñòåêà å òúðñåíèÿò âúçåë g, òúðñåíåòî å óñïåøíî, êðàé. Èíà÷å,
+4. Ïðåìàõíè åëåìåíòà íà âúðõà íà ñòåêà è ïîñòàâè â ñòåêà âñè÷êè íåîáõîäåíè âúçëè, ñâúðçàíè ñ íåãî (îòáåëÿçâàò ñå êàòî îáõîäåíè)
+5. Âúðíè ñå íà ñòúïêà 2
+ 
+void DFS(int x, int required){
+    stack s;
+    bool *visited = new bool[n+1];
+    int i;
+    for(i = 0; i <= n; i++)
+        visited[i] = false;
+    s.push(x);
+    visited[x] = true;
+    if(x == required) return;
+    cout << "Depth first Search starting from vertex ";
+    cout << x << " : " << endl;
+    while(!s.isEmpty()){
+        int k = s.pop();
+        if(k == required) break;
+        cout<<k<<" ";
+        for (i = n; i >= 0 ; --i)
+            if (isConnected(k, i) && !visited[i]) {
+                s.push(i);
+                visited[i] = true;
+            }
+    }
+    cout<<endl;
+    delete [] visited;
+} 
+
+
+Àëãîðèòúì çà òúðñåíå â øèðèíà
+ 
+void bfs(int s)
+ { queue q;
+   int dist[n];
+   dist[s]=0;
+   push(q,s);
+   while(q is not empty)
+     { pop(q,u);
+       visited[u]=1;
+       Previsit(u);
+       for(v in Adj(u)))                 
+         if(visited[v]==0) { 
+             push(q,v);
+             dist[v]=dist[u]+1;
+         }
+     }
+  }

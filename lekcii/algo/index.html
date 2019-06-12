@@ -63,7 +63,15 @@
     />
     <link rel="stylesheet" href="/css/materialize.min.css" />
     <link rel="stylesheet" href="/css/dark.css" id="siteTheme" />
-    <script></script>
+    
+    <style>
+      ul a {
+        color: #ccf; 
+        font-size: 1.2em;
+      }
+
+      .fas {color: white}
+    </style>
     <title>Програма 4 семестър</title>
   </head>
   <body>
@@ -96,52 +104,38 @@
     </ul>
     <div id="wrapper-outer">
       <div id="wrapper-inner">
-        <h3>График на занятията</h3>
-        <h5>Софтуерно инженерство 4 семестър</h5>
-
-        <button class="btn grey darken-4 filter-btn">
-          Филтри <i class="material-icons right">arrow_drop_down</i>
-        </button>
-
-        <div class="filters">
-          <form action="#">
-            <div class="row">
-              <!-- Group dropdown-->
-              <div class="col s12 m3">
-                <select name="group" id="group" class="browser-default">
-                  <option value="0">Всички групи</option>
-                  <option value="1">1 Група</option>
-                  <option value="2">2 Група</option>
-                  <option value="3">3 Група</option>
-                  <option value="4" selected>4 Група</option>
-                </select>
-              </div>
-
-              <!-- Search bar -->
-              <div class="col s12 m3 input-field">
-                <input type="text" name="search" id="search" />
-                <label for="search">Търсене</label>
-              </div>
+        <div class="card grey darken-4">
+          <div class="card-content">
+            <div class="card-title">
+              <h1>Алгоритми и структури от данни</h1>
             </div>
-          </form>
+
+            <h4>Лекции</h4>
+            <ul>
+              <li><a href="files/l2-algorithms.pdf" target="_blank">Лекция 2 - Алгоритми, сложност <i class="fas fa-file-pdf"></i></a></li>
+              <li><a href="files/l3-search.pdf" target="_blank">Лекция 3 - Търсене <i class="fas fa-file-pdf"></i></a></li>
+              <li><a href="files/l4-sorting.pdf" target="_blank">Лекция 4 - Сортиране <i class="fas fa-file-pdf"></i></a></li>
+              <li><a href="files/l5-heap.pdf" target="_blank">Лекция 5 - Heap <i class="fas fa-file-pdf"></i></a></li>
+              <li><a href="files/l6-recursion.pdf" target="_blank">Лекция 6 - Рекурсия <i class="fas fa-file-pdf"></i></li>
+              <li><a href="files/L7-QUICKSORT.pdf" target="_blank">Лекция 7 - QuickSort <i class="fas fa-file-pdf"></i></a></li>
+              <li><a href="files/L7-QUICKSORT.ppt" download>Лекция 7 - QuickSort  <i class='fas fa-file-powerpoint'></i></a></li>
+              <li><a href="files/L8-AbstSD.pdf" target="_blank">Лекция 8 - Абстрактни структури от данни. Тип Структура <i class="fas fa-file-pdf"></i></a></li>
+              <li><a href="files/L8-AbstSD.ppt" download>Лекция 8 - Абстрактни структури от данни. Тип Структура <i class="fas fa-file-powerpoint"></i></a></li>
+              <li><a href="files/L9-Lists.ppt" download>Лекция 9 - Списъци <i class="fas fa-file-powerpoint"></i></a></li>
+            </ul>
+
+            <h4>Други файлове</h4>
+            <ul>
+                <li><a href='files/Chapter-14.1-Linear-Data-Structures-v.0.9.doc' download>Chapter-14.1-Linear-Data-Structures-v.0.9.doc <i class='fas fa-file-word'></i></a></li>
+                <li><a href='files/Conspect.doc' download>Conspect.doc <i class='fas fa-file-word'></i></a></li>
+                <li><a href='files/files.doc' download>files.doc <i class='fas fa-file-word'></i></a></li>
+                <li><a href='files/graphs.txt' download>graphs.txt <i class='fas fa-file-alt'></i></a></li>
+                <li><a href='files/Linear Data structures - C#.ppt'>Linear Data structures - C#.ppt <i class='fas fa-file-powerpoint'></i></a></li>
+                <li><a href='files/Prim.doc' download>Prim.doc <i class='fas fa-file-word'></i></a></li>
+                <li><a href='files/Trees C#.txt' download>Trees C#.txt <i class='fas fa-file-alt'></i></a></li>
+            </ul>
+          </div>
         </div>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Ден</th>
-              <th>Час</th>
-              <th>Седмица</th>
-              <th>Група</th>
-              <th>Зала</th>
-              <th>Л/У</th>
-              <th>Дисциплина</th>
-              <th>Преподавател</th>
-            </tr>
-          </thead>
-
-          <tbody></tbody>
-        </table>
       </div>
     </div>
     <footer>
@@ -153,19 +147,6 @@
     <script src="js/app.js"></script>
 
     <script>
-      $(document).ready(function() {
-        $(".sidenav").sidenav(); //Initialize the sidenav on mobile
-        $("select").formSelect(); //Initialize the select input
-
-        particlesJS.load("particles", "/js/particlesjs-config.json", () => {}); //Initialize particles.js
-
-        if (!filtersVisible) {
-          $(".filters").css("display", "none"); //Hide the .filters div if filtersVisible is set to false
-        }
-
-        loadSchedule(); //Load the schedule from a separate file
-      });
-
       $(".dropdown-el").click(function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -177,6 +158,6 @@
     <!-- Analytics -->
     <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101169489);</script>
     <script async src="//static.getclicky.com/js"></script>
-
+    <script src="https://kit.fontawesome.com/8726463999.js"></script>
   </body>
 </html>
