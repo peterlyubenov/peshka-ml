@@ -1,6 +1,6 @@
 # peshka.ml
 
-This is the source code for https://peshka.ml/
+This is the *old* source code for https://peshka.ml/
 
 It's static HTML, CSS and JavaScript and I'm using jQuery, Materialize and ParticlesJS for the background. That's pretty much about it
 
